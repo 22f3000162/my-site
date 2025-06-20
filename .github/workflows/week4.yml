@@ -1,7 +1,7 @@
 name: Sheduler
 on:
   schedule:
-    - cron: '45 12 * * *'
+    - cron: '49 12 * * *'
 jobs:
   issue:
     runs-on: ubuntu-latest
@@ -11,7 +11,12 @@ jobs:
 
       - name: 22f3000162@ds.study.iitm.ac.in
         run: |
-          echo "Daily commit" >> daily-log.txt
+          git config user.name "22f3000162"
+          git config user.email "22f3000162@ds.study.iitm.ac.in"
+
+      - name: Make commit
+        run: |
+          echo "commit" >> daily-log.txt
           git add daily-log.txt
           git commit -m "Daily commit"
           git push
