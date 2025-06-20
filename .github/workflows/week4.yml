@@ -1,7 +1,7 @@
 name: Sheduler
 on:
   schedule:
-    - cron: '48 12 * * *'
+    - cron: '45 12 * * *'
 jobs:
   issue:
     runs-on: ubuntu-latest
