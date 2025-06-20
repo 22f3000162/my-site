@@ -2,7 +2,7 @@ name: Sheduler
 
 on:
   schedule:
-    - cron: '12 13 * * *'  # Runs at 13:00 UTC = 18:30 IST
+    - cron: '16 13 * * *'  # Runs at 13:00 UTC = 18:30 IST
   workflow_dispatch: 
 
 jobs:
@@ -21,4 +21,4 @@ jobs:
           echo "Run at $(date -u)" >> daily-log.txt
           git add daily-log.txt
           git commit -m "Daily commit"
-          git push
+          git push origin main
