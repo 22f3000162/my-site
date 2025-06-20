@@ -2,7 +2,8 @@ name: Sheduler
 
 on:
   schedule:
-    - cron: '07 13 * * *'  # Runs at 13:00 UTC = 18:30 IST
+    - cron: '12 13 * * *'  # Runs at 13:00 UTC = 18:30 IST
+  workflow_dispatch: 
 
 jobs:
   commit:
